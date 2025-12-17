@@ -1,0 +1,289 @@
+/* Fix for broken/white product images and missing text */
+
+/* ========== PRODUCT IMAGES FIX ========== */
+
+/* Show product images that are being hidden */
+.fade_in_image img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure thumbnail container images are visible */
+.thumbnail-container img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Fix for product gallery images */
+.woocommerce-product-gallery img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure product images display during loading */
+.item-product img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Fix hover images */
+.image-cover {
+    opacity: 0 !important;
+}
+
+/* Make sure main product images are visible */
+img.max-w-full.w-full {
+    opacity: 1 !important;
+}
+
+/* Override any loading state that hides images and text during loading */
+body.pace-running .thumbnail-container img,
+body.pace-running .item-product img {
+    opacity: 1 !important;
+}
+
+/* FIX: Show product info text that was being hidden during loading */
+body.pace-running.filter-product .products-category .item .item-product .product_info,
+body.pace-running.filter-product .products-category .item .item-product .product_title,
+body.pace-running.filter-product .products-category .item .item-product .product_name,
+body.pace-running.filter-product .products-category .item .item-product .product_price,
+body.pace-running.filter-product .products-category .item .item-product .thumbnail-container {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ========== PRODUCT TEXT FIX ========== */
+
+/* Ensure product info sections are always visible */
+.product_info {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.product_title {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.product_name {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.product_price {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Show all item-product content */
+.item-product {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Override fade animation issues */
+.fade_in_image {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ========== APP STORE BUTTONS FIX ========== */
+
+/* Ensure app store images are visible */
+.wp-image-10635,
+.wp-image-10636 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* ========== FOOTER ELEMENTS FIX ========== */
+
+/* Show all elementor-invisible elements (fadeInUp animations) */
+.elementor-invisible {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: none !important;
+    animation-delay: 0 !important;
+}
+
+/* Ensure sections are visible */
+.elementor-section.elementor-invisible {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Show heading widgets */
+.elementor-widget-heading {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Show icon list widgets */
+.elementor-widget-icon-list {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Icon list container */
+.elementor-icon-list-items {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Individual list items */
+.elementor-icon-list-item {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ========== SOCIAL ICONS FIX ========== */
+
+/* Show social icons widget */
+.elementor-widget-social-icons {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Social icons wrapper - use flex for horizontal layout */
+.elementor-social-icons-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Grid items for social icons */
+.elementor-grid-item {
+    display: inline-flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Individual social icon links */
+.elementor-social-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Font Awesome icon elements - Fix missing font files issue */
+.elementor-social-icon i,
+.elementor-icon-list-item i {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit !important;
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* ========== RBB CUSTOM ICONS FIX ========== */
+/* Fix missing rbb-font.woff - use arrows and symbols instead */
+
+/* DISABLE rbb-icons.css rules completely - use wildcard selector */
+[class*="rbb-icon"]::before,
+[class*="rbb-icon"]:before {
+    font-family: Arial, sans-serif !important;
+}
+
+/* Specific override for menu direction icons */
+.rbb-icon-direction-39::before,
+.rbb-icon-direction-39:before {
+    content: "▼" !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 1em !important;
+}
+
+.rbb-icon-direction-52::before,
+.rbb-icon-direction-52:before {
+    content: "▼" !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 1em !important;
+}
+
+.rbb-icon-view-grid-1::before {
+    content: "☰" !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* Additional RBB icons that use missing font */
+.rbb-icon-search-10::before { content: "🔍" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-close-1::before { content: "✕" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-phone-4::before { content: "☎" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-email-4::before { content: "✉" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-delivery-11::before { content: "🚚" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-location-2::before { content: "📍" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-human-user-11::before { content: "👤" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-wishlist-17::before { content: "❤" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-shopping-cart-6::before { content: "🛒" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-menu-6::before { content: "≡" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-direction-711::before { content: "→" !important; font-family: Arial, sans-serif !important; }
+.rbb-icon-quickview-popup-1::before { content: "👁" !important; font-family: Arial, sans-serif !important; }
+
+/* ========== STAR RATING FIX ========== */
+
+.star-rating {
+    /* 1. SỬA LỖI DUPLICATE: */
+    /* Trả về relative để theme tự định vị, KHÔNG dùng display: flex/block ép buộc */
+    position: relative !important;
+    
+    /* 2. SỬA LỖI NỬA NGÔI SAO: */
+    /* Set chiều rộng cố định vừa đủ cho 5 ngôi sao (khoảng 5.5 lần kích thước chữ) */
+    width: 5.6em !important; 
+    
+    /* Thiết lập font chuẩn để các sao có kích thước đều nhau, tránh bị vỡ layout */
+    font-size: 14px !important;
+    line-height: 1 !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
+    
+    overflow: hidden !important;
+    height: 1em !important; /* Chiều cao cố định bằng 1 dòng */
+}
+
+/* Lớp nền: 5 ngôi sao màu xám */
+.star-rating::before {
+    content: "★★★★★" !important;
+    color: #d3d3d3 !important;
+    float: left !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: absolute !important;
+}
+
+/* Lớp phủ: Phần hiển thị sao vàng */
+.star-rating span {
+    overflow: hidden !important;
+    float: left !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: absolute !important;
+    padding-top: 1.5em !important; /* Mẹo: Đẩy chữ "Rated..." xuống dưới để ẩn đi */
+    
+    /* QUAN TRỌNG: Không set width ở đây, width sẽ do HTML inline style quyết định (ví dụ style="width:80%") */
+}
+
+/* Vẽ 5 ngôi sao vàng đè lên trên */
+.star-rating span::before {
+    content: "★★★★★" !important;
+    color: #ffc107 !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: absolute !important;
+    
+    /* Đảm bảo sao vàng khớp vị trí 100% với sao xám */
+    width: 5.6em !important; 
+    white-space: nowrap !important;
+}
